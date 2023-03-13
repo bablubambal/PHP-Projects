@@ -15,13 +15,13 @@
 
    <section class="flex">
 
-      <a href="home.php" class="logo">
+      <a href="index.php" class="logo">
          <!-- Shopie<span>.</span> -->
          <img class="w-25" src="./images/logo.png" alt="">
    </a>
 
       <nav class="navbar">
-         <a href="home.php">home</a>
+         <a href="index.php">home</a>
          <a href="about.php">about</a>
          <a href="orders.php">orders</a>
          <a href="shop.php">shop</a>

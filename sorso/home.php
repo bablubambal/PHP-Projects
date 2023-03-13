@@ -24,16 +24,16 @@ include 'components/wishlist_cart.php';
 
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    
-   <!-- bootstrap css  -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-<!-- bootstrap js   -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
+   
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+<!-- bootstrap css  -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<!-- bootstrap js   -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -56,7 +56,7 @@ include 'components/wishlist_cart.php';
             <h3 class="text-dark fs-1 font-weight-bold" >RENT CLOTHS </h3>
                         <span class="text-dark">Rent the clothes from our site</span> <br>
 
-            <a href="shop.php" class="btn">shop now</a>
+            <a href="shop.php" class="btn btn-outline-dark px-3 py-2 fs-2">shop now</a>
          </div>
       </div>
 
@@ -68,7 +68,7 @@ include 'components/wishlist_cart.php';
            
             <h3 class="text-dark fs-1 font-weight-bold" >USE CLOTHS </h3>
             <span class="text-dark">Use  the  rented clothes</span> <br>
-            <a href="shop.php" class="btn">shop now</a>
+            <a href="shop.php" class="btn btn-outline-dark px-3 py-2 fs-2">shop now</a>
          </div>
       </div>
 
@@ -81,7 +81,7 @@ include 'components/wishlist_cart.php';
            
             <h3 class="text-dark fs-1 font-weight-bold" >RETURN </h3>
             <span class="text-dark">Return the Clothes after Used..</span> <br>
-            <a href="shop.php" class="btn">shop now</a>
+            <a href="shop.php" class="btn btn-outline-dark px-3 py-2 fs-2">shop now</a>
          </div>
       </div>
 
@@ -95,6 +95,11 @@ include 'components/wishlist_cart.php';
 
 </div>
 
+<!-- [7:00 PM, 2/28/2023] +91 81790 50602: Skirts & ghagras
+[7:00 PM, 2/28/2023] +91 81790 50602: Salwar suit 
+Sarees
+Lehenga 
+Kurtis -->
 <section class="category">
 
    <h1 class="heading">shop by category</h1>
@@ -103,34 +108,34 @@ include 'components/wishlist_cart.php';
 
    <div class="swiper-wrapper">
 
-   <a href="category.php?category=dress" class="swiper-slide slide ">
-      <img src="images/icon-1.webp" alt="">
-      <h3>Dress</h3>
+   <a href="category.php?category=skirts ghagras" class="swiper-slide slide ">
+      <img src="images/i-1.webp" alt="">
+      <h3>Skirts & Ghagras</h3>
    </a>
 
-   <a href="category.php?category=shirts" class="swiper-slide slide">
-      <img src="images/icon-2.webp" alt="">
-      <h3>Shirt</h3>
+   <a href="category.php?category=suit" class="swiper-slide slide">
+      <img src="images/i-3.webp" alt="">
+      <h3>Salwar suit </h3>
    </a>
 
-   <a href="category.php?category=wedding" class="swiper-slide slide">
-      <img src="images/icon-3.webp" alt="">
-      <h3>Wedding</h3>
+   <a href="category.php?category=sarees" class="swiper-slide slide">
+      <img src="images/i-2.webp" alt="">
+      <h3>Sarees</h3>
    </a>
 
-   <a href="category.php?category=hoddie" class="swiper-slide slide">
-      <img src="images/icon-4.webp" alt="">
-      <h3>Hoddie</h3>
+   <a href="category.php?category=lehenga" class="swiper-slide slide">
+      <img src="images/i-4.webp" alt="">
+      <h3>Lehenga</h3>
    </a>
 
-   <a href="category.php?category=jackets" class="swiper-slide slide">
+   <!-- <a href="category.php?category=jackets" class="swiper-slide slide">
       <img src="images/icon-5.webp" alt="">
       <h3>Jackets</h3>
-   </a>
+   </a> -->
 
-   <a href="category.php?category=slippers" class="swiper-slide slide">
-      <img src="images/icon-9.png" alt="">
-      <h3>Slippers</h3>
+   <a href="category.php?category=kurtis" class="swiper-slide slide">
+      <img src="images/i-5.webp" alt="">
+      <h3>Kurtis</h3>
    </a>
 
    
@@ -171,7 +176,7 @@ include 'components/wishlist_cart.php';
          <div class="price"><span>₹</span><?= $fetch_product['price']; ?><span>/-</span></div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
-      <input type="submit" value="add to cart" class="btn" name="add_to_cart">
+      <input type="submit" value="add to cart" class="btn btn-outline-dark" name="add_to_cart">
    </form>
    <?php
       }

@@ -35,9 +35,9 @@ if(isset($_SESSION['user_id'])){
               <h1>About Us</h1>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="left-image">
-              <img src="assets/images/aboutimg.jpg" alt="">
+          <div class="col-md-6 w-100">
+            <div class="left-image w-100">
+              <img src="./cassets/images/populer-products/p2.png" style="width:100%; height:600px" alt="">
             </div>
           </div>
           <div class="col-md-6">

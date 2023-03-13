@@ -59,7 +59,18 @@ include 'components/wishlist_cart.php';
         
         <!--responsive.css-->
         <link rel="stylesheet" href="cassets/css/responsive.css">
-       
+     
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />      
+<style>
+
+.form-control{
+  height: 47px;
+    margin-bottom: 15px;
+    border-radius: 18px
+}
+
+</style>
+
 
     </head>
 	

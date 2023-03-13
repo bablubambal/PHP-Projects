@@ -16,11 +16,16 @@ include 'components/wishlist_cart.php';
 ?>
 
 
-<?php include "templates/header.php"; ?>
-<?php include "templates/nav.php"; ?>
+<?php
+//  include "templates/header.php";
+  ?>
+<?php 
+// include "templates/nav.php"; 
+?>
 
 
-
+<?php include "temp/basichead.php" ; ?>	
+	<?php include "temp/hero.php" ; ?>
 
 <div class="container">
     <div class="col-md-12">
@@ -43,13 +48,13 @@ include 'components/wishlist_cart.php';
       while($fetch_product = $select_products->fetch(PDO::FETCH_ASSOC)){
    ?>
         <div class="col-lg-3 col-md-6 col-sm-12">
-            <form action="" method="post" class="box">
+            <form action="" method="post" class="">
                 <input type="hidden" name="pid" value="<?= $fetch_product['id']; ?>">
                 <input type="hidden" name="name" value="<?= $fetch_product['name']; ?>">
                 <input type="hidden" name="price" value="<?= $fetch_product['price']; ?>">
                 <input type="hidden" name="image" value="<?= $fetch_product['image_01']; ?>">
                 <div class="featured-item">
-                    <img src="uploaded_img/<?= $fetch_product['image_01'];   ?>" class="w-100 h-100" alt="Item 1">
+                    <img src="uploaded_img/<?= $fetch_product['image_01'];   ?>" class="img-responsive " alt="Item 1">
                     <h4><?= $fetch_product['name']; ?></h4>
                     <h6><span>₹</span><?= $fetch_product['price']; ?></h6>
                     <div class="d-flex justify-content-between align-items-center my-3">
@@ -81,7 +86,13 @@ include 'components/wishlist_cart.php';
 </section>
 
 
+<?php include "temp/newsletter.php" ; ?>	
 
+<?php include "temp/footer.php" ; ?>	
 
-<?php include "templates/subs.php" ?>
-<?php include "templates/footer.php" ?>
+<?php
+//  include "templates/subs.php" 
+ ?>
+<?php 
+// include "templates/footer.php"
+ ?>

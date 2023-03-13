@@ -6,7 +6,7 @@
 
 <h3 class="heading">Shopping Cart</h3>
 
-<div class="container d-flex">
+<div class="container d-flex flex-wrap">
 
     <?php
       $grand_total = 0;
@@ -38,20 +38,29 @@
                     </tr>
                     <tr>
                         <td>Custom Size</td>
-                        <td> <input type="text" name="Size" class="qty w-100" value="<?= $fetch_cart['size']; ?>"> </td>
+                        <td> 
+                        <input type="radio" name="Size" value="S" id="">S
+<input type="radio" name="Size" value="M" id="">M
+<input type="radio" name="Size" value="L" id="">L
+<input type="radio" name="Size" value="XL" id="">XL
+<input type="radio" name="Size" value="XXL" id="">XXL
+<input type="radio" name="Size" value="XXXL" id="">XXXL
+                           
+                        <!-- <input type="text" name="Size" class="qty w-100" value="<?= $fetch_cart['size']; ?>">  -->
+                        </td>
 
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td> Custom Color</td>
                         <td> <input type="text" name="color" class="qty w-100" value="<?= $fetch_cart['color']; ?>">
                         </td>
 
-                    </tr>
+                    </tr> -->
                     <tr>
                         <td> Other Customization</td>
                         <td>
                             <input type="text" name="customization" class="w-100 fs-2"
-                                value="<?= $fetch_cart['customization']; ?>" placeholder="Your customization here...">
+                                value="<?= $fetch_cart['customization']; ?>" placeholder="Your Body Measurements..">
                         </td>
                     <tr>
                         <td >

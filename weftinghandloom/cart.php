@@ -1,12 +1,17 @@
 <?php include "codes/cartcode.php"; ?>
-<?php include "templates/header.php"; ?>
-<?php include "templates/nav.php"; ?>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+<!-- <php include "templates/header.php"; ?>
+<php include "templates/nav.php"; ?> -->
 
 
+<?php include "temp/basichead.php" ; ?>	
+	<?php include "temp/hero.php" ; ?>
 
-<h3 class="heading">Shopping Cart</h3>
 
-<div class="container d-flex">
+<h3 class="heading text-center my-3 fs-1">Shopping Cart</h3>
+
+<div class="container row" style="margin-left:30px; margin-right:50px;">
 
     <?php
       $grand_total = 0;
@@ -15,7 +20,7 @@
       if($select_cart->rowCount() > 0){
          while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){
    ?>
-    <form action="" method="post" class="box">
+    <form action="" method="post" class="col-lg-4 col-md-6 col-sm-12">
         <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
         <!-- <a href="quick_view.php?pid=<?= $fetch_cart['pid']; ?>" class="fas fa-eye"></a> -->
         <div class="featured-item">
@@ -126,8 +131,10 @@
 </section>
 
 
+<?php include "temp/newsletter.php" ; ?>	
+
+<?php include "temp/footer.php" ; ?>
 
 
-
-<?php include "templates/subs.php" ?>
-<?php include "templates/footer.php" ?>
+<!-- <hp include "templates/subs.php" ?>
+<php include "templates/footer.php" ?> -->

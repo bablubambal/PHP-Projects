@@ -23,7 +23,8 @@
       <nav class="navbar">
          <a href="home.php">home</a>
          <a href="about.php">about</a>
-         <a href="orders.php">orders</a>
+         <!-- <a href="orders.php">orders</a> -->
+         <a href="sorsostudio.php">Sorso Studio</a>
          <a href="shop.php">shop</a>
          <a href="contact.php">contact</a>
       </nav>

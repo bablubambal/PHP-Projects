@@ -15,13 +15,21 @@ include 'components/wishlist_cart.php';
 
 ?>
 
-<?php include "templates/header.php" ?>
+<?php 
+// include "templates/header.php"
+ ?>
+<?php 
+// include "templates/nav.php"
+ ?>
+
+<?php include "temp/basichead.php" ; ?>	
+	<?php include "temp/hero.php" ; ?>
  <!-- Additional CSS Files -->
  <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/tooplate-main.css">
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/flex-slider.css">
-<?php include "templates/nav.php" ?>
+
 
 
 <!-- Single Starts Here -->
@@ -166,11 +174,13 @@ include 'components/wishlist_cart.php';
 
 
 
+<?php include "temp/newsletter.php" ; ?>	
+
+<?php include "temp/footer.php" ; ?>
 
 
-
-<?php include "templates/subs.php" ?>
-<?php include "templates/footer.php" ?>
+<!-- php include "templates/subs.php" ?>
+php include "templates/footer.php" ?> -->
 
    
 

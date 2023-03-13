@@ -31,6 +31,12 @@ include 'components/wishlist_cart.php';
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+    <!-- bootstrap css  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<!-- bootstrap js   -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+
 
 </head>
 <body>
@@ -39,7 +45,7 @@ include 'components/wishlist_cart.php';
 
 <section class="products">
 
-   <h1 class="heading">Our Products</h1>
+   <h1 class="heading">Rent Our Products</h1>
 
    <div class="box-container">
 
@@ -62,7 +68,17 @@ include 'components/wishlist_cart.php';
          <div class="price"><span>₹</span><?= $fetch_product['price']; ?><span>/-</span></div>
          <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
       </div>
-      <input type="submit" value="add to cart" class="btn" name="add_to_cart">
+     <?php
+     
+     if($fetch_product['price'] ==0){
+      echo '<input  value="Rented" class="btn btn-outline-danger fs-3" name="add_to_cart">';
+
+     }
+     else {
+      echo '<input type="submit" value="add to cart" class="btn btn-outline-dark fs-3" name="add_to_cart">';
+     }
+
+     ?>
    </form>
    <?php
       }
