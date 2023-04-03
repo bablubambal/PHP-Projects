@@ -53,7 +53,7 @@ else{
                         <div class="panel-body">
                        
 
-<?php $sql = "SELECT tblbooks.BookName,tblcategory.CategoryName,tblauthors.AuthorName,tblbooks.ISBNNumber,tblbooks.BookPrice,tblbooks.id as bookid,tblbooks.bookImage,tblbooks.isIssued from  tblbooks join tblcategory on tblcategory.id=tblbooks.CatId join tblauthors on tblauthors.id=tblbooks.AuthorId";
+<?php $sql = "SELECT tblbooks.BookName, tblcategory.CategoryName,tblauthors.AuthorName,tblbooks.ISBNNumber,tblbooks.BookPrice,tblbooks.id ,tblbooks.bookPdf as bookid,tblbooks.bookImage,tblbooks.isIssued,bookPdf from  tblbooks join tblcategory on tblcategory.id=tblbooks.CatId join tblauthors on tblauthors.id=tblbooks.AuthorId";
 $query = $dbh -> prepare($sql);
 $query->execute();
 $results=$query->fetchAll(PDO::FETCH_OBJ);
@@ -74,6 +74,10 @@ foreach($results as $result)
                                             <?php echo htmlentities($result->ISBNNumber);?><br />
                                                 <?php if($result->isIssued=='1'): ?>
 <p style="color:red;">Book Already issued</p>
+
+<!-- <a href="admin/bookimg/<?php echo htmlentities($result->bookPdf);?>" >Download Book</a> -->
+<!-- php echo htmlentities($result->bookPdf); -->
+
 <?php endif;?>
                             </div>
 

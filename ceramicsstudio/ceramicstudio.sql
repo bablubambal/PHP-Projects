@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Feb 28, 2023 at 12:28 PM
+-- Generation Time: Mar 26, 2023 at 04:13 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.0.25
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `sorso`
+-- Database: `ceramicstudio`
 --
 
 -- --------------------------------------------------------
@@ -39,6 +39,32 @@ CREATE TABLE `admins` (
 
 INSERT INTO `admins` (`id`, `name`, `password`) VALUES
 (1, 'admin', '6216f8a75fd5bb3d5f22b6f9958cdede3fc086c2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bookings`
+--
+
+CREATE TABLE `bookings` (
+  `id` int(100) NOT NULL,
+  `user_id` int(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `number` varchar(12) NOT NULL,
+  `message` varchar(500) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`id`, `user_id`, `name`, `email`, `number`, `message`) VALUES
+(0, 1, 'hi confirm my boo', 'emp1@emp.com', '2023-03-21T1', 'Default Msg'),
+(0, 1, 'admin', 'studiosofhy@gmail.com', '2023-03-30T1', 'Default Msg'),
+(0, 1, 'admin', 'test@gmail.com', '2023-03-13', 'Default Msg'),
+(0, 1, 'Sirimalla', 'studiosofhy@gmail.com', '07700999550', 'Default Msg'),
+(0, 1, 'anshu', 'anshu@gmail.com', '2023-03-27', 'Default Msg');
 
 -- --------------------------------------------------------
 
@@ -64,7 +90,7 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`id`, `user_id`, `pid`, `name`, `price`, `quantity`, `image`, `customization`, `size`, `color`) VALUES
-(1, 1, 1, 'Sareee', 999, 1, 'Screenshot_20230224-194101_Pinterest.jpg', 'new things add', 'L', 'Yellow');
+(6, 1, 1, 'Monstera Deliciosa Plant', 899, 2, 'monstera-deliciosa-plant-31793362370692.webp', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -80,6 +106,14 @@ CREATE TABLE `messages` (
   `number` varchar(12) NOT NULL,
   `message` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `user_id`, `name`, `email`, `number`, `message`) VALUES
+(1, 1, 'Sirimalla', 'studiosofhy@gmail.com', '07700999550', 'testing message'),
+(2, 1, 'Sirimalla', 'studiosofhy@gmail.com', '07700999550', 'booking test');
 
 -- --------------------------------------------------------
 
@@ -100,6 +134,14 @@ CREATE TABLE `orders` (
   `placed_on` date NOT NULL DEFAULT current_timestamp(),
   `payment_status` varchar(20) NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `name`, `number`, `email`, `method`, `address`, `total_products`, `total_price`, `placed_on`, `payment_status`) VALUES
+(1, 1, 'Sirimalla Ramchandra', '0770099955', 'studiosofhy@gmail.com', 'credit card', 'flat no. Kakatiya Colony, Phase I, , Hanamkonda, , India - 506001', 'Sareee (999 x 3) - Monstera Deliciosa Plant (899 x 1) - ', 3896, '2023-03-04', 'pending'),
+(2, 1, 'Sirimalla Ramchandra', '0770099955', 'studiosofhy@gmail.com', 'cash on delivery', 'flat no. Kakatiya Colony, Phase I, , Hanamkonda, , India - 506001', 'Zuri Planter Ball Rib (799 x 1) - ', 799, '2023-03-26', 'pending');
 
 -- --------------------------------------------------------
 
@@ -123,9 +165,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `details`, `price`, `image_01`, `image_02`, `image_03`, `category`) VALUES
-(1, 'Sareee', 'Sareee get the details of the Saree', 999, 'Screenshot_20230224-194101_Pinterest.jpg', '6_e97be2e2-d3e5-4be0-a49b-54f5e88422a0_1200x.jpg', '6_e97be2e2-d3e5-4be0-a49b-54f5e88422a0_1200x.jpg', ''),
-(2, 'New Dress', 'dresss', 2400, '1_1800x1800_96edefa6-a708-4410-ac62-260913e8a339_1200x.jpg', '2_567027cc-1ef5-4204-8275-4d3bcde76aa1_1200x.png', '1_1800x1800_96edefa6-a708-4410-ac62-260913e8a339_1200x.jpg', 'dress'),
-(3, 'new product', 'new details', 1234, 'PSL645-1.jpg', '42_ecdde961-1dae-4027-8d50-ac4d05a9cfd7_1200x.jpg', '42_ecdde961-1dae-4027-8d50-ac4d05a9cfd7_1200x.jpg', 'dress slippers wedding jack');
+(1, 'Monstera Deliciosa Plant', 'Water Once A Week\r\nNeeds Bright Indirect Sunlight\r\nToxic To Pets\r\nNeeds Gardening Experience\r\n', 899, 'monstera-deliciosa-plant-31793362370692.webp', 'monstera-deliciosa-plant-31793362337924.webp', 'monstera-deliciosa-plant-31793362174084.webp', 'vase'),
+(2, 'Zuri Planter Ball Rib', 'The perfect shape and size for easy handling and livening up your indoor garden. The Planter Ball Rib is made of fibre that is both durable and lightweight for home gardeners', 799, 'small-ivory-zuri-planter-ball-rib-31642661617796.webp', 'ZuriPlanterBallGroovesmall4.webp', 'zuri-planter-ball-rib-31642661683332.webp', 'plates'),
+(3, 'Football Ceramic Pot', 'Made of premium quality ceramic in the fun and quirky shape of a football to add some sunshine yellow to your home.', 699, 'football-5-inch-white-with-plant_1.webp', 'football-5-inch-white-with-plant_1.webp', 'football-5-inch-white-with-plant_1.webp', 'glasses'),
+(4, 'Italian Basil Seeds', 'What is Italian cooking without basil. This easy to grow plant forms and integral part of Italian cuisine owing to its unique flavour profile and numerous health benefits.', 99, '1000-seeds-italian-basil-seeds-31657391947908.webp', '1000-seeds-italian-basil-seeds-31657391947908.webp', '1000-seeds-italian-basil-seeds-31657391947908.webp', 'bowls'),
+(5, 'Spinach Seeds (Palak)', 'Well we all know where Popeye got his strength from and he was not exaggerating.', 199, '16-gm-spinach-seeds-palak-31902551572612.jpg', '16-gm-spinach-seeds-palak-31902551572612.jpg', '16-gm-spinach-seeds-palak-31902551572612.jpg', 'seeds'),
+(6, 'Neem Oil - 250 ml', 'Neem oil is every gardeners best friend. Regularly spraying neem oil, diluted as per instructions, keeps diseases and infections at bay. ', 399, 'Neem_250.webp', 'Neem_250.webp', 'Neem_250.webp', 'pesticide');
 
 -- --------------------------------------------------------
 
@@ -222,25 +267,25 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
