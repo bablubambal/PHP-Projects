@@ -1,5 +1,3 @@
-
-
 <?php
 
 include 'components/connect.php';
@@ -14,19 +12,11 @@ if(isset($_SESSION['user_id'])){
 };
 
 ?>
-<?php
-//  include "templates/header.php"; 
-  ?>
-<?php include "temp/hero.php"; ?> 
-<?php 
-// include "templates/nav.php";
- ?> 
-
-
-
+<?php include "templates/header.php" ?> 
+<?php include "templates/nav.php" ?> 
     <!-- Page Content -->
     <!-- About Page Starts Here -->
-    <div class="about-page my-5">
+    <div class="about-page">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -35,36 +25,43 @@ if(isset($_SESSION['user_id'])){
               <h1>About Us</h1>
             </div>
           </div>
-          <div class="col-md-6 w-100">
-            <div class="left-image w-100">
-              <img src="./cassets/images/populer-products/p2.png" style="width:100%; height:600px" alt="">
+          <div class="col-md-6">
+            <div class="left-image">
+              <img src="assets/images/download.jpg" alt="">
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-content">
-              <h4>About Us .</h4>
-              <p>
-              WEFTING Handloom Company is a unique and innovative brand that combines the art of handloom with the modern technique of wefting to create custom-made hair extensions. Their products are crafted with care and precision, using high-quality natural hair and traditional weaving techniques to create seamless and natural-looking extensions.
-              <br>
-              With a focus on sustainability and ethical practices, WEFTING Handloom Company works with local communities and artisans to source their materials and support traditional craftsmanship. Their team of skilled artisans is dedicated to providing their customers with personalized service and creating custom-fit extensions that match the client's hair texture and color. WEFTING Handloom Company is the perfect choice for anyone looking for high-quality, sustainable, and ethical hair extensions that are both beautiful and natural-looking
-              </p>
-             
+              <h4>Indulge in artisanal bliss at MANNA Bakery - where freshly baked treats are crafted with love and care, satisfying your cravings with every bite</h4>
+           
 
+<p>
+MANNA Bakery is a charming, artisanal bakery located in the heart of a bustling city. The aroma of freshly baked goods wafts through the air, inviting passersby to step inside and indulge in a world of delightful treats. The shop is adorned with rustic decor, featuring exposed brick walls, warm wooden accents, and soft, warm lighting that creates a cozy and welcoming ambiance.
+</p>
+<p>As customers enter MANNA Bakery, they are greeted by friendly and knowledgeable staff who are passionate about their craft. 
+<br>  
+The bakers work tirelessly in an open kitchen, kneading dough, shaping loaves, and carefully crafting pastries with precision and care. The air is filled with the sound of baking, from the hum of the ovens to the rhythmic tapping of dough being shaped.</p>
              
-              <!-- <div class="share">
+              <div class="share">
                 <h6>Find us on: <span><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></span></h6>
-              </div> -->
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
+    <!-- About Page Ends Here -->
 
-    <?php include "temp/newsletter.php" ; ?>	
+    <!-- Subscribe Form Starts Here -->
+    <?php include "templates/subs.php"; ?>
+ 
+    <!-- Subscribe Form Ends Here -->
 
-<?php include "temp/footer.php" ; ?>	
 
+ 
+
+    
+   <?php include "templates/footer.php"; ?>
 
 
     <!-- Bootstrap core JavaScript -->

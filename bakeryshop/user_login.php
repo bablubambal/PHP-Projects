@@ -1,17 +1,9 @@
 <?php include "codes/userlogincode.php"; ?>
 
+<?php include "templates/header.php" ?> 
+<?php include "templates/nav.php" ?> 
 
-<?php include "temp/basichead.php" ; ?>	
-	<?php include "temp/hero.php" ; ?>
-<?php
-//  include "templates/header.php" 
- ?> 
-<?php 
-// include "templates/nav.php" 
-?> 
-
-
-<section class="container w-50 my-5" style="width:50%; margin-top:40px;">
+<section class="container w-50 my-5">
 
    <form action="" method="post" >
       <h3 class="mt-5 text-center" >Login Now</h3>
@@ -28,10 +20,8 @@
 
 
 
-
-<?php include "temp/newsletter.php" ; ?>	
-
-<?php include "temp/footer.php" ; ?>	
+<?php include "templates/subs.php" ?> 
+<?php include "templates/footer.php" ?> 
 
 
 

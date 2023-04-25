@@ -16,7 +16,7 @@ include 'components/wishlist_cart.php';
 ?>
 
 
- 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,7 +28,7 @@ include 'components/wishlist_cart.php';
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
 
-    <title>Garden of Dreams</title>
+    <title>MANNA Baker's</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -44,15 +44,15 @@ include 'components/wishlist_cart.php';
   <body>
  
     <!-- Pre Header -->
-    <!-- <div id="pre-header">
+    <div id="pre-header">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <span>Transform your outdoor space into a lush oasis with Garden of Dreams' wide variety of plants and flowers</span>
+            <span>"Indulge in Baked Bliss at MANNA Bakery - Where Artisanal Delights Come to Life!"</span>
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
 
     <?php
    if(isset($message)){

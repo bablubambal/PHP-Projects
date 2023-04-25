@@ -136,7 +136,13 @@ if(isset($_GET['delete'])){
          </div>
          <div class="inputBox">
             <span>product Category (required)</span>
-            <textarea name="category" placeholder="enter product category" class="box" required maxlength="500" cols="30" rows="10"></textarea>
+            <select name="category" id="" required >
+               <option value="cake">Cake</option>
+               <option value="cooldrinks">Cool Drinks</option>
+               <option value="desert">Deserts</option>
+               <option value="pastry">Pastries</option>
+            </select>
+            <!-- <textarea name="category" placeholder="enter product category" class="box" required maxlength="500" cols="30" rows="10"></textarea> -->
          </div>
       </div>
       

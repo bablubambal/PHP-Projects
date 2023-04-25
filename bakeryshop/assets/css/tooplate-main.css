@@ -25,7 +25,7 @@ a {
 }
 
 .main-button a {
-	background-color: #64cd3a;
+	background-color: #3a8bcd;
 	border-radius: 5px;
 	padding: 10px 15px;
 	display: inline-block;
@@ -47,7 +47,7 @@ a {
 .section-heading .line-dec {
 	width: 30px;
 	height: 5px;
-	background-color: #0edd1f;
+	background-color: #3a8bcd;
 }
 .section-heading h1 {
 	font-size: 22px;
@@ -58,7 +58,7 @@ a {
 
 /* Pre Header Style */
 #pre-header {
-	background-color: #83d814;
+	background-color: #3a8bcd;
 	text-align: center;
 }
 #pre-header span {
@@ -101,7 +101,7 @@ a {
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .show>.nav-link {
-	color: #48ff00;
+	color: #3a8bcd;
 }
 .navbar:after {
 	width: 100%;
@@ -116,8 +116,8 @@ a {
 	background-image: none;
 }
 .navbar-dark .navbar-toggler {
-	border-color: #09e66c;
-	background-color: #008cff;	
+	border-color: #3a8bcd;
+	background-color: #3a8bcd;	
 	height: 50px;
 	outline: none;
 }
@@ -183,10 +183,10 @@ a {
 	transition: all 0.5s;
 }
 .featured-item:hover h4 {
-	color: #2cfc3d;
+	color: #3a8bcd;
 }
 .featured-item h6 {
-	color: #2ed883;
+	color: #3a8bcd;
 	font-size: 15px;
 	font-weight: 700;
 	margin-bottom: 0px;
@@ -199,7 +199,7 @@ a {
 	outline: none;
 }
 .owl-theme .owl-dots .active span {
-	background-color: #8eeb63!important;
+	background-color: #3a8bcd!important;
 }
 .owl-theme .owl-dots .owl-dot span {
 	background-color: #aaa;
@@ -214,7 +214,7 @@ a {
 
 /* Subscribe Style */
 .subscribe-form {
-	background-color: #1fce62;
+	background-color: #3a8bcd;
 	padding: 80px 0px;
 	text-align: center;
 }
@@ -261,7 +261,7 @@ a {
 	border-radius: 5px;
 	padding: 10px 15px;
 	display: inline-block;
-	color: #46cd3a;
+	color: #3a8bcd;
 	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: 300;
@@ -303,7 +303,7 @@ a {
 	transition: all 0.5s;
 }
 .footer .footer-menu a:hover {
-	color: #2bff01;
+	color: #3a8bcd;
 	text-decoration: none;
 }
 .footer .social-icons {
@@ -325,7 +325,7 @@ a {
 	transition: all 0.5s;
 }
 .footer .social-icons a:hover {
-	background-color: #69cd3a;
+	background-color: #3a8bcd;
 }
 
 /* Sub Footer Style */
@@ -339,7 +339,7 @@ a {
 	line-height: 60px;
 }
 .sub-footer a {
-	color: #27f8b2;
+	color: #3a8bcd;
 	text-decoration: none;
 }
 
@@ -461,7 +461,7 @@ a {
 	margin-top: 0px;
 }
 .single-product .right-content h6 {
-	color: #69cd3a;
+	color: #3a8bcd;
 	font-size: 17px;
 	font-weight: 700;
 	margin-top: 10px;
@@ -472,7 +472,7 @@ a {
 }
 .single-product .right-content span {
 	font-size: 14px;
-	color: #10e44f;
+	color: #3a8bcd;
 	font-weight: 500;
 	display: inline-block;
 	margin-bottom: 15px;
@@ -497,7 +497,7 @@ a {
 .single-product .right-content .button {
 	margin-left: 15px;
 	cursor: pointer;
-	background-color: #14e441;
+	background-color: #3a8bcd;
 	outline: none;
 	border-radius: 5px;
 	padding: 10px 15px;
@@ -525,10 +525,10 @@ a {
 	transition: all 0.5s;
 }
 .single-product .right-content .down-content span a:hover {
-	color: #18d6cd;
+	color: #3a8bcd;
 }
 .single-product .right-content .down-content span a:hover i {
-	background-color: #3acd66;
+	background-color: #3a8bcd;
 }
 .single-product .right-content .down-content span a i {
 	transition: all 0.5s;
@@ -602,7 +602,7 @@ a {
 	font-weight: 400;
 }
 .about-page .right-content span a:hover i {
-	background-color: #15da6d;
+	background-color: #3a8bcd;
 }
 
 
@@ -657,11 +657,11 @@ a {
 	font-weight: 400;
 }
 .contact-page .right-content span a:hover i {
-	background-color: #3fce1b;
+	background-color: #3a8bcd;
 }
 .contact-page .right-content .button {
 	cursor: pointer;
-	background-color: #0feb59;
+	background-color: #3a8bcd;
 	outline: none;
 	border-radius: 5px;
 	padding: 10px 15px;

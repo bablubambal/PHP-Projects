@@ -1,10 +1,7 @@
 
 <?php include "codes/checkoutcode.php"; ?>
-<!-- <php include "templates/header.php"; ?>
-<php include "templates/nav.php"; ?> -->
-<?php include "temp/basichead.php" ; ?>	
-	<?php include "temp/hero.php" ; ?>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<?php include "templates/header.php"; ?>
+<?php include "templates/nav.php"; ?>
 <section class="checkout-orders">
 
    <form action="" method="POST">
@@ -23,9 +20,9 @@
                $total_products = implode($cart_items);
                $grand_total += ($fetch_cart['price'] * $fetch_cart['quantity']);
       ?>
-      <div class="d-flex w-50 mx-auto ">
-         <h3 class="name w-50 border  p-2"><?= $fetch_cart['name']; ?></h3>
-         <h3 class="price w-50 border p-2"> <?= '$'.$fetch_cart['price'].'/- x '. $fetch_cart['quantity']; ?></h3>
+      <div class="d-flex w-50 mx-auto p-2">
+         <h3 class="name w-50 bg-secondary"><?= $fetch_cart['name']; ?></h3>
+         <h3 class="price w-50 bg-secondary"> <?= '$'.$fetch_cart['price'].'/- x '. $fetch_cart['quantity']; ?></h3>
       </div>
          <!-- <p> <?= $fetch_cart['name']; ?> <span>(<?= '$'.$fetch_cart['price'].'/- x '. $fetch_cart['quantity']; ?>)</span> </p> -->
       <?php
@@ -111,9 +108,5 @@
 
 
 
-<?php include "temp/newsletter.php" ; ?>	
-
-<?php include "temp/footer.php" ; ?>	
-
-<!-- <php include "templates/subs.php" ?> 
-<php include "templates/footer.php" ?> -->
+<?php include "templates/subs.php" ?> 
+<?php include "templates/footer.php" ?>

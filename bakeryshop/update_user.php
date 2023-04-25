@@ -2,13 +2,10 @@
 
 <?php include "codes/registercode.php"; ?>
 
-<!-- <hp include "templates/header.php" ?> 
-<php include "templates/nav.php" ?>  -->
+<?php include "templates/header.php" ?> 
+<?php include "templates/nav.php" ?> 
 
-<?php include "temp/basichead.php" ; ?>	
-	<?php include "temp/hero.php" ; ?>
-
-<section class="container w-75 mt-5" style="width:50%;">
+<section class="container w-75 mt-5">
 
    <form action="" method="post">
       <h3 class="text-center">Update Your Profile</h3>
@@ -28,9 +25,6 @@
 
 
 
-<?php include "temp/newsletter.php" ; ?>	
-
-<?php include "temp/footer.php" ; ?>
 
 
 

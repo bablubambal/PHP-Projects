@@ -29,6 +29,8 @@ if(isset($_POST['update_qty'])){
    $qty = $_POST['qty'];
    $size = $_POST['Size'];
    $color = $_POST['color'];
+   $size = "M";
+   $color="red";
    // $customizationphoto = $_POST['customizationphoto'];
    $customization = $_POST['customization'];
    $qty = filter_var($qty, FILTER_SANITIZE_STRING);

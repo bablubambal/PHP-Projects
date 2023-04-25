@@ -4,10 +4,11 @@
         <div class="row">
           <div class="col-md-12">
             <div class="caption">
-              <h2>Garden of Dreams</h2>
+              <h2>MANNA Bakery's..</h2>
               <div class="line-dec"></div>
               <p>
-              Garden of Dreams is a one-stop-shop for all your gardening needs, offering a wide range of high-quality plants, seeds, and pesticides. With a focus on sustainability and environmentally friendly practices, their products are carefully selected to ensure the best possible value and quality for their customers.
+              Baked to Perfection, Made with Love - MANNA Bakery, Where Baking is an Art and Every Treat is a Masterpiece!" <br>
+"Experience Baking at its Finest - MANNA Bakery, Where Passion Meets Pastry!  
               .</p>
               <div class="main-button">
                 <a href="shop.php">Buy Now!</a>

@@ -1,17 +1,12 @@
 <?php include "codes/cartcode.php"; ?>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-
-<!-- <php include "templates/header.php"; ?>
-<php include "templates/nav.php"; ?> -->
+<?php include "templates/header.php"; ?>
+<?php include "templates/nav.php"; ?>
 
 
-<?php include "temp/basichead.php" ; ?>	
-	<?php include "temp/hero.php" ; ?>
 
+<h3 class="heading">Shopping Cart</h3>
 
-<h3 class="heading text-center my-3 fs-1">Shopping Cart</h3>
-
-<div class="container row" style="margin-left:30px; margin-right:50px;">
+<div class="container d-flex flex-wrap">
 
     <?php
       $grand_total = 0;
@@ -20,7 +15,7 @@
       if($select_cart->rowCount() > 0){
          while($fetch_cart = $select_cart->fetch(PDO::FETCH_ASSOC)){
    ?>
-    <form action="" method="post" class="col-lg-4 col-md-6 col-sm-12">
+    <form action="" method="post" class="box">
         <input type="hidden" name="cart_id" value="<?= $fetch_cart['id']; ?>">
         <!-- <a href="quick_view.php?pid=<?= $fetch_cart['pid']; ?>" class="fas fa-eye"></a> -->
         <div class="featured-item">
@@ -41,35 +36,46 @@
                                 value="<?= $fetch_cart['quantity']; ?>"> <br>
                         </td>
                     </tr>
-                    <tr>
-                        <td>Fabrication</td>
-                        <td> <input type="text" name="Size" class="qty w-100" value="<?= $fetch_cart['size']; ?>"> </td>
+                    <!-- <tr>
+                        <td>Custom Size</td>
+                        <td>
+                            <input type="radio" name="Size" value="S" id="">S
+                            <input type="radio" name="Size" value="M" id="">M
+                            <input type="radio" name="Size" value="L" id="">L
+                            <input type="radio" name="Size" value="XL" id="">XL
+                            <input type="radio" name="Size" value="XXL" id="">XXL
+                            <input type="radio" name="Size" value="XXXL" id="">XXXL
 
-                    </tr>
-                    <tr>
-                        <td>Design : </td>
+                            <input type="text" name="Size" class="qty w-100" value="<?= $fetch_cart['size']; ?>"> 
+                        </td>
+
+                    </tr> -->
+                    <!-- <tr>
+                        <td> Custom Color</td>
                         <td> <input type="text" name="color" class="qty w-100" value="<?= $fetch_cart['color']; ?>">
                         </td>
 
-                    </tr>
-                    <tr>
+                    </tr> -->
+                    <!-- <tr>
                         <td> Other Customization</td>
                         <td>
                             <input type="text" name="customization" class="w-100 fs-2"
-                                value="<?= $fetch_cart['customization']; ?>" placeholder="Your customization here...">
+                                value="<?= $fetch_cart['customization']; ?>" placeholder="Your Body Measurements..">
                         </td>
-                    <tr>
-                        <td >
+                    <tr> -->
+                        <td>
                             Sub Total :
-                           
+
                         </td>
                         <td>
-                        <span>₹<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span>
+                            <span>₹<?= $sub_total = ($fetch_cart['price'] * $fetch_cart['quantity']); ?>/-</span>
                         </td>
                     </tr>
                     <tr>
                         <td>Update</td>
                         <td><button type="submit" class="btn btn-outline-primary" name="update_qty">Update</button></td>
+                        <td><input type="submit" value="delete item" onclick="return confirm('delete this from cart?');"
+                                class="delete-btn" name="delete"></td>
                     </tr>
                 </tbody>
             </table>
@@ -125,16 +131,15 @@
     <a href="shop.php" class="btn btn-outline-warning">Continue Shopping</a>
     <a href="cart.php?delete_all" class="btn btn-outline-danger <?= ($grand_total > 1)?'':'disabled'; ?>"
         onclick="return confirm('delete all from cart?');">Clear Your Cart</a>
-    <a href="checkout.php" class="btn btn-outline-primary <?= ($grand_total > 1)?'':'disabled'; ?>">Proceed to Checkout</a>
+    <a href="checkout.php" class="btn btn-outline-primary <?= ($grand_total > 1)?'':'disabled'; ?>">Proceed to
+        Checkout</a>
 </div>
 
 </section>
 
 
-<?php include "temp/newsletter.php" ; ?>	
-
-<?php include "temp/footer.php" ; ?>
 
 
-<!-- <hp include "templates/subs.php" ?>
-<php include "templates/footer.php" ?> -->
+
+<?php include "templates/subs.php" ?>
+<?php include "templates/footer.php" ?>

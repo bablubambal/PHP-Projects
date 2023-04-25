@@ -38,11 +38,11 @@
 
     <!-- Sub Footer Starts Here -->
     <div class="sub-footer">
-      <div class="container-fluid bg-success text-white">
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <div class=" text-white">
-              <p style="color:white;">Copyright &copy; 2023 Garden of Dreams</p>
+            <div class="copyright-text">
+              <p>Copyright &copy; 2023 MANNA Bakery</p>
             </div>
           </div>
         </div>
